@@ -301,10 +301,14 @@
 
             <div class="contact__form">
                 <form action="https://formspree.io/f/myyodewp" method="POST">
-                    <input required class="form__nombre" type="text" name="nombre" placeholder="¿Cómo te llamas?">
-                    <input required class="form__email" type="email" name="email" placeholder="Tu email">
-                    <textarea required class="form__mensaje" name="mensaje" placeholder="Mensaje"></textarea>
-                    <input class="form__accept" required type="checkbox" id="checkbox"><label for="checkbox">Acepto los
+                    <input required id="input-form" class="form__nombre" type="text" name="nombre"
+                        placeholder="¿Cómo te llamas?">
+                    <input required id="input-form" class="form__email" type="email" name="email"
+                        placeholder="Tu email">
+                    <textarea required id="input-form" class="form__mensaje" name="mensaje"
+                        placeholder="Mensaje"></textarea>
+                    <input class="form__accept" required id="input-form" type="checkbox" id="checkbox"><label
+                        for="checkbox">Acepto los
                         términos y condiciones</label>
                     <input value="Enviar" class="form__btn" type="submit">
                 </form>
@@ -313,7 +317,7 @@
             <div class="contact__icons">
                 <div class="contact__icons-email">
                     <img src="./img/mensaje.svg">
-                    <p>hola@benimorales.com</p>
+                    <a href="mailto:i.benimorales@gmail.com">i.benimorales@gmail.com</a>
                 </div>
                 <div class="contact__icons-location">
                     <img src="./img/location.svg">
@@ -325,7 +329,7 @@
     </main>
 
     <footer>
-        <p>Portfolio realizado con 💙 por Beni Morales.</p>
+        <p>Portfolio realizado con 💙 por <b>Beni Morales.</b></p>
     </footer>
 
     <script src="./js/main.js"></script>

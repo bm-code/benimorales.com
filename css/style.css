@@ -8,6 +8,7 @@ button{border: 1px solid; background: transparent;}
 ul,ol{list-style: none; margin: 0; padding: 0; margin: 0; list-style: none;}
 a, a:hover{text-decoration: none;}
 picture{display: block;}
+textarea{resize: vertical; max-height: 200px;}
 
 /*Estilos globales*/
 
@@ -516,14 +517,11 @@ header{
     max-width: 32px;
 }
 
-.contact__icons-email p, .contact__icons-location p{
+.contact__icons-email a, .contact__icons-location p{
     color: var(--dark-blue);
     font-size: 16px;
     margin-left: 10px;
-}
-
-.contact__icons-location p{
-    align-self: flex-end;
+    align-self: center;
 }
 
 footer{
