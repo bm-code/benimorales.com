@@ -12,7 +12,23 @@ textarea{resize: vertical; max-height: 200px;}
 
 /*Estilos globales*/
 
+/* @media (prefers-color-scheme: dark) {
+    :root{
+        --background-color:#000;
+        --text-color: #fff;
+    }
+  }
+  
+  @media (prefers-color-scheme: light) {
+    :root{
+        --background-color: #121213;
+        --text-color: #eee;
+    }
+  } */
+
 :root {
+/*     background: var(--background-color);
+    color: var(--text-color); */
     --dark-blue: #1D2238;
     --bg-blue: #F8FBFE;
     --green: #43F7D4;

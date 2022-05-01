@@ -8,3 +8,9 @@ const inputForm = document.querySelectorAll('#input-form');
 
 //Plegar el menú móvil cuando clickamos en un link
 menuLink.forEach(item => item.addEventListener('click', () => inputMenu.checked = !inputMenu.checked));
+
+// reCAPTCHA V3
+
+function onSubmit(token) {
+    document.getElementById("demo-form").submit();
+}
