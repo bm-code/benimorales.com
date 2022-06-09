@@ -752,6 +752,14 @@ footer {
         border-radius: 30px;
     }
 
+    .mobile-menu>li {
+        margin-left: 15px;
+    }
+
+    .mobile-menu>li>a {
+        font-size: 16px;
+    }
+
     /*Cabecera*/
 
     .cabecera {
@@ -892,6 +900,16 @@ footer {
         margin: 40px auto;
     }
 
+}
+
+@media screen and (min-width:1086px) {
+    .mobile-menu>li {
+        margin-left: 25px;
+    }
+
+    .mobile-menu>li>a {
+        font-size: 18px;
+    }
 }
 
 @media screen and (min-width:1440px) {
