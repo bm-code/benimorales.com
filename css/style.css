@@ -308,7 +308,6 @@ header {
 .social__links {
     display: flex;
     justify-content: center;
-    margin-top: 20px;
 }
 
 .social__links>li {
@@ -806,6 +805,10 @@ footer {
         box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.16);
         width: 200px;
         margin: 20px auto;
+    }
+
+    .social__links {
+        margin-top: 20px;
     }
 
     @keyframes FEATURED {
