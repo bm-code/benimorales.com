@@ -258,6 +258,10 @@ header {
     box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.16);
 }
 
+.cabecera__name>h2 {
+    margin-bottom: 10px;
+}
+
 .cabecera__name>p {
     margin-bottom: 20px;
 }
@@ -304,6 +308,7 @@ header {
 .social__links {
     display: flex;
     justify-content: center;
+    margin-top: 20px;
 }
 
 .social__links>li {
