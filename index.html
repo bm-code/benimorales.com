@@ -5,9 +5,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Beni Morales | Front End Developer</title>
-    <meta name="description" content="Front End Developer">
-    <!-- Google Tag Manager -->
+
+    <title>Beni Morales | Angular Specialist · Frontend & Mobile Developer</title>
+    <meta name="description"
+        content="Portfolio de Beni Morales. Desarrollo Frontend y Mobile con foco en Angular, calidad de código y producto.">
+    <meta name="keywords"
+        content="Beni Morales, Angular Specialist, Frontend Developer, Mobile Developer, Flutter, Microfrontends, TypeScript, CI/CD, GitLab">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Beni Morales | Angular Specialist · Frontend & Mobile">
+    <meta property="og:description"
+        content="Desarrollador Frontend y Mobile con experiencia en Angular, migraciones de versión y arquitectura modular.">
+    <meta property="og:image" content="./img/memoji.jpg">
+    <meta property="og:locale" content="es_ES">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Beni Morales | Angular Specialist · Frontend & Mobile">
+    <meta name="twitter:description"
+        content="Portfolio personal de desarrollo Frontend y Mobile.">
+    <meta name="twitter:image" content="./img/memoji.jpg">
+
     <script>(function (w, d, s, l, i) {
             w[l] = w[l] || []; w[l].push({
                 'gtm.start':
@@ -16,367 +33,198 @@
                 j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
                     'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
         })(window, document, 'script', 'dataLayer', 'GTM-NKQC82H');</script>
-    <!-- End Google Tag Manager -->
+
     <link rel="icon" type="image/x-icon" href="./img/favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Syne:wght@500;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
-    <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NKQC82H" height="0" width="0"
             style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-    <header>
-        <div class="header">
-            <div class="header__logo">
-                <a href="#top"><img src="img/logo.svg"></a>
-            </div>
-            <div class="header__menu">
-                <input type="checkbox" id="burger-activador">
-                <label for="burger-activador" class="header__menu-burger">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                </label>
 
-                <nav class="header__menu-desplegable">
-                    <ul class="mobile-menu">
-                        <li><a class="menu__link" href="#top">Beni</a></li>
-                        <li><a class="menu__link" href="#career">Skills</a></li>
-                        <li><a class="menu__link" href="#formacion">Formación</a></li>
-                        <li><a class="menu__link" href="#services">Qué puedo ofrecer</a></li>
-                        <li><a class="menu__link" href="#projects">Proyectos</a></li>
-                        <li><a class="btn hello" href="#contact"><span class="hello__icon">👋🏼</span> Salúdame!</a>
-                        </li>
-                    </ul>
+    <canvas class="cursor-trail" id="cursor-trail" aria-hidden="true"></canvas>
+    <a class="floating-cta" href="#contact">Contacto</a>
+
+    <div class="site-shell" id="top">
+        <header class="site-header">
+            <div class="site-header__inner">
+                <a class="brand" href="#top" aria-label="Volver arriba">
+                    <img src="./img/logo.svg" alt="Beni Morales logo">
+                </a>
+
+                <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav"
+                    aria-label="Abrir menú">
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <nav class="site-nav" id="site-nav" aria-label="Navegación principal">
+                    <a class="site-nav__link" href="#about">Perfil</a>
+                    <a class="site-nav__link" href="#experience">Experiencia</a>
+                    <a class="site-nav__link" href="#featured">Proyectos</a>
+                    <a class="site-nav__link" href="#archive">Más proyectos</a>
+                    <a class="site-nav__cta" href="#contact">Contactar</a>
                 </nav>
-
             </div>
-            <!--.header__menu-->
-        </div>
-        <!--.header-->
-    </header>
+        </header>
 
-    <main id="top">
+        <main>
+            <section class="hero section" data-reveal>
+                <span class="hero__rotator">Frontend + Mobile</span>
 
-        <section class="cabecera cabecera-mobile">
-            <div class="cabecera__name">
-                <p>👋🏼 Hola, soy</p>
-                <h2>Beni Morales</h2>
-                <a href="docs/CV_Benimorales.pdf" target="_blank" download="CV Beni Morales"
-                    class="cv__btn project__btn">📄 Descarga mi
-                    CV</a>
-            </div>
-            <div class="cabecera__frontend">
-                <div class="cabecera__frontend-profession">
-                    <h1>Front End<br> Developer</h1>
-                    <ul class="social__links">
-                        <li><a href="https://github.com/bm-code/" target="_blank" rel="nofollow noopener"><img
-                                    src="./img/github.svg"></a>
-                        </li>
-                        <li><a href="https://www.linkedin.com/in/benimoralessilva/" target="_blank"
-                                rel="nofollow noopener"><img src="./img/linkedin.svg"></a></li>
-                    </ul>
-                </div>
-                <div class="cabecera__frontend-memoji">
-                    <img src="img/memoji.jpg">
-                </div>
-            </div>
-        </section>
-        <section class="cabecera cabecera-desktop">
-            <div class="cabecera-desktop__content">
-                <p>👋🏼 Hola, soy</p>
-                <h2>Beni Morales</h2>
-                <p>Front End Developer</p>
-                <div class="cabecera-desktop__memoji">
-                    <img src="img/memoji.jpg">
-                </div>
-                <a href="docs/CV_Benimorales.pdf" target="_blank" download="CV Beni Morales"
-                    class="cv__btn project__btn">📄 Descarga mi
-                    CV</a>
-                <ul class="social__links">
-                    <li><a href="https://github.com/bm-code/" target="_blank" rel="nofollow noopener"><img
-                                src="./img/github.svg"></a>
-                    </li>
-                    <li><a href="https://www.linkedin.com/in/benimoralessilva/" target="_blank"
-                            rel="nofollow noopener"><img src="./img/linkedin.svg"></a></li>
-                </ul>
-                <p class="featured">Bienvenido a mi Portfolio!</p>
-            </div>
-        </section>
+                <div class="hero__copy">
+                    <p class="hero__kicker" id="hero-kicker"></p>
+                    <h1 class="hero__title" id="hero-title"></h1>
+                    <p class="hero__role" id="hero-role"></p>
+                    <p class="hero__intro" id="hero-intro"></p>
 
-        <section class="career" id="career">
-            <div class="career__title">
-                <h2>A qué me dedico</h2>
-                <p>Como Desarrollador Front End trabajo en el diseño y desarrollo de aplicaciones web de todo tipo. Me
-                    dedico desde la creación del diseño de un prototipo hasta el desarrollo del mismo y la
-                    implementación de las funcionalidades que requiera.</p>
-                <img src="img/developer.svg" alt="Development vector">
-            </div>
-            <div class="career__content">
+                    <p class="lang-pair" id="hero-line"></p>
 
-                <div class="career__icons">
-                    <h3 class="carreer__icons-title">Tecnologías Front End</h3>
-                    <ul class="career__icons-list">
-                        <li><span class="tooltip">HTML</span><img src="img/html.svg"></li>
-                        <li><span class="tooltip">CSS</span><img src="img/css.svg"></li>
-                        <li><span class="tooltip">JavaScript</span><img src="img/javascript.svg"></li>
-                        <li><span class="tooltip">React</span><img src="img/react.svg"></li>
-                        <li><span class="tooltip">Angular</span><img src="img/angular.svg"></li>
-                        <li><span class="tooltip">Bootstrap</span><img src="img/bootstrap.svg"></li>
-                        <li><span class="tooltip">Git</span><img src="img/git.svg"></li>
-                        <li><span class="tooltip">npm</span><img src="img/npm.svg"></li>
-                    </ul>
-                    <h3 class="carreer__icons-title">Herramientas de diseño</h3>
-                    <p>Además, tengo conocimientos y experiencia en el uso de herrmientas de edición y diseño gráfico.
-                    </p>
-                    <ul class="career__icons-list">
-                        <li><span class="tooltip">Adobe xd</span><img src="img/adobe-xd.svg"></li>
-                        <li><span class="tooltip">Photoshop</span><img src="img/photoshop.svg"></li>
-                        <li><span class="tooltip">Illustrator</span><img src="img/illustrator.svg"></li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <section class="formacion" id="formacion">
-            <div class="formacion__title">
-                <h2>Mi formación</h2>
-            </div>
-            <div class="formacion__content">
-                <ul>
-                    <li>
-                        <p>📚 <b>Grado en Marketing e Investigación de Mercados</b> - Universidad de Cádiz</p>
-                    </li>
-                    <li>
-                        <p>🎓 <b>Máster en Dirección y Gestión de Marketing Digital</b> - Universidad de Málaga</p>
-                    </li>
-                    <li>
-                        <p>
-                            🎨 <b>Máster en Diseño y Desarrollo Front End</b> - Gauss Multimedia
-                            <span class="award">🏆 Premio Alumno del Año Curso 2020-2021</span>
-                        </p>
-                    </li>
-                    <li>
-                        <p>💻 <b>Bootcamp Full Stack Web Development</b> - Code Space Academy</p>
-                    </li>
-                </ul>
-            </div>
-        </section>
-
-        <section class="services" id="services">
-            <h2 class="services__title">Qué puedo <span class="green">ofrecer</span> </h2>
-
-            <div class="services__grid">
-                <div class="services__card">
-                    <img class="services__card-img" src="./img/web-design.svg">
-                    <h2 class="services__card-title">Diseño Web</h2>
-                </div>
-
-                <div class="services__card">
-                    <img class="services__card-img" src="./img/development.svg">
-                    <h2 class="services__card-title">Desarrollo Web</h2>
-                </div>
-
-                <div class="services__card">
-                    <img class="services__card-img" src="./img/design-develop.svg">
-                    <h2 class="services__card-title">Diseño y Desarrollo</h2>
-                </div>
-            </div>
-        </section>
-
-        <section class="projects" id="projects">
-            <h2 class="projects__title">Mis proyectos</h2>
-
-            <div class="projects__item">
-                <img class="projects__item-img" src="./img/blackroom.png">
-                <div class="projects__item-content">
-                    <h3 class="projects__item-content-title">Blackroom - Urban Hotel</h3>
-                    <p class="projects__item-content-description">Web realizada como Proyecto de Fin del Máster
-                        en
-                        Diseño y Desarrollo Front End. Se trata de la web de un hotel urbano "con mucho rollo" que
-                        cuenta con exposiciones y conciertos para todos los públicos. En este caso llevé a cabo desde la
-                        creación de la idea hasta el diseño del prototipo con <b>Adobe xd</b> y su posterior desarrollo.
-                        Con el desarrollo de este proyecto recibí el <b>premio al alumno del año</b> en el curso
-                        2020-2021.</p>
-                    <div class="projects__item-tools">
-                        <ul>
-                            <li><img src="img/html.svg" alt="logo html"></li>
-                            <li><img src="img/css.svg" alt="logo css"></li>
-                            <li><img src="img/jquery.svg" alt="jquery logo"></li>
-                            <li><img src="img/adobe-xd.svg" alt="adobe xd logo"></li>
-                            <li><img src="img/illustrator.svg" alt=illustrator logo"></li>
-                        </ul>
+                    <div class="hero__actions">
+                        <a class="btn btn--primary" href="./docs/CV_Beni_Morales_2026.pdf" target="_blank"
+                            rel="noopener" download="CV_Beni_Morales_2026">CV 2026</a>
+                        <a class="btn btn--secondary" href="#featured">Ver proyectos</a>
                     </div>
-                    <a class="project__btn" href="https://www.gaussmultimedia.eu/thebest/2021/benimorales/index.php"
-                        target="_blank">🌐 Ver proyecto</a>
-                </div>
-            </div>
 
-            <div class="projects__item">
-                <img class="projects__item-img" src="./img/hearty-tattoo.jpg">
-                <div class="projects__item-content">
-                    <h3 class="projects__item-content-title">Hearty Tattoo - Estudio de tatuajes</h3>
-                    <p class="projects__item-content-description">Hearty Tattoo" es un proyecto web que diseñé y
-                        desarrollé utilizando Angular, con el objetivo de proporcionar a un estudio de tatuajes una
-                        presencia en línea atractiva y funcional. Esta página web simple y elegante ofrece a los
-                        visitantes una vista completa de los trabajos artísticos del estudio, información sobre los
-                        tatuadores, horarios de atención y la posibilidad de contactar fácilmente para programar citas.
-                        Con una interfaz intuitiva y un diseño que refleja la esencia creativa del estudio, "Hearty
-                        Tattoo" es una herramienta esencial para atraer a nuevos clientes y fortalecer la comunidad de
-                        amantes del arte corporal.</p>
-                    <div class="projects__item-tools">
-                        <ul>
-                            <li><img src="img/angular.svg" alt="node package manager logo"></li>
-                            <li><img src="img/npm.svg" alt="node package manager logo"></li>
-                        </ul>
+                    <div class="hero__contact">
+                        <a id="hero-email" href="mailto:i.benimorales@gmail.com">i.benimorales@gmail.com</a>
+                        <a id="hero-linkedin" href="https://www.linkedin.com/in/benimoralessilva/" target="_blank"
+                            rel="nofollow noopener">LinkedIn</a>
                     </div>
-                    <a class="project__btn" href="https://heartytattoo.com/" target="_blank">🌐 Ver
-                        proyecto</a>
-                </div>
-            </div>
 
-            <div class="projects__item">
-                <img class="projects__item-img" src="./img/advice-generator.jpg">
-                <div class="projects__item-content">
-                    <h3 class="projects__item-content-title">Random Advice Generator</h3>
-                    <p class="projects__item-content-description">Herramienta desarrollada mediante la conexión con la
-                        API "Advice Slip". Haciendo click en el botón se hará una petición a la API y generará una frase
-                        aleatoria.</p>
-                    <div class="projects__item-tools">
-                        <ul>
-                            <li><img src="img/html.svg" alt="logo html"></li>
-                            <li><img src="img/css.svg" alt="logo css"></li>
-                            <li><img src="img/javascript.svg" alt="logo javascript"> </li>
-                            <li><img src="img/npm.svg" alt="node package manager logo"></li>
-                        </ul>
+                    <ul class="hero__badges" id="hero-badges"></ul>
+                </div>
+
+                <aside class="hero__visual">
+                    <div class="hero__memoji-wrap">
+                        <img src="./img/memoji.jpg" alt="Beni Morales memoji">
                     </div>
-                    <a class="project__btn" href="https://advice-generator-tool.vercel.app/" target="_blank">🌐 Ver
-                        proyecto</a>
-                </div>
-            </div>
 
-            <div class="projects__item">
-                <img class="projects__item-img" src="./img/tip-calculator.jpg">
-                <div class="projects__item-content">
-                    <h3 class="projects__item-content-title">Tip Calculator App</h3>
-                    <p class="projects__item-content-description">Calculadora de propinas realizada con <b>React.js</b>.
-                        El usuario indica el precio de la cuenta, la propina que quieren dar y el número de
-                        personas que son. La herramienta calculará el precio de la propina y el precio final de la
-                        cuenta por persona.</p>
-                    <div class="projects__item-tools">
-                        <ul>
-                            <li><img src="img/react.svg" alt="logo react.js"> </li>
-                            <li><img src="img/npm.svg" alt="node package manager logo"></li>
-                        </ul>
+                    <div class="hero__marquee">
+                        <div class="hero__marquee-track" id="hero-marquee-track"></div>
                     </div>
-                    <a class="project__btn" href="https://tip-calculator-tool.vercel.app/" target="_blank">🌐 Ver
-                        proyecto</a>
-                </div>
-            </div>
+                </aside>
+            </section>
 
-            <div class="projects__item">
-                <img class="projects__item-img" src="./img/upcoming-films.jpg">
-                <div class="projects__item-content">
-                    <h3 class="projects__item-content-title">Upcoming Films</h3>
-                    <p class="projects__item-content-description">Aplicación web que muestra a tiempo real todas las
-                        películas de estreno. Haciendo click en una película el usuario podrá ver la ficha de la misma,
-                        donde se encuentra su correspondiente enlace a IMDB. Este proyecto se ha realizado con
-                        <b>React.js</b> conectando con la <b>API de The Movie Database</b> para mostrar todos los datos.
-                    </p>
-                    <div class="projects__item-tools">
-                        <ul>
-                            <li><img src="img/react.svg" alt="logo react.js"></li>
-                            <li><img src="img/npm.svg" alt="node package manager logo"></li>
-                        </ul>
+            <section class="statement section" data-reveal>
+                <span class="section-rotator">Manifiesto</span>
+                <div class="statement__grid" id="statement-grid"></div>
+            </section>
+
+            <section class="about section" id="about" data-reveal>
+                <span class="section-rotator">Perfil</span>
+                <header class="section-heading">
+                    <p class="section-heading__kicker">Sobre mí</p>
+                    <h2>Qué puedes esperar de mí en un equipo</h2>
+                </header>
+
+                <p class="lang-pair about__lead" id="profile-summary"></p>
+
+                <div class="stack-layout" id="stack-groups"></div>
+
+                <article class="why-card">
+                    <h3>Por qué podría encajar en tu equipo</h3>
+                    <ul class="why-card__list" id="why-list"></ul>
+                </article>
+            </section>
+
+            <section class="experience section" id="experience" data-reveal>
+                <span class="section-rotator">Experiencia</span>
+                <header class="section-heading">
+                    <p class="section-heading__kicker">Recorrido profesional</p>
+                    <h2>Experiencia y formación</h2>
+                </header>
+
+                <div class="experience-layout">
+                    <div class="experience-column">
+                        <h3>Experiencia</h3>
+                        <div id="experience-list"></div>
                     </div>
-                    <a class="project__btn" href="https://upcoming-films.vercel.app/" target="_blank">🌐 Ver
-                        proyecto</a>
-                </div>
-            </div>
 
-            <div class="projects__item">
-                <img class="projects__item-img" src="./img/url-shortener.jpg">
-                <div class="projects__item-content">
-                    <h3 class="projects__item-content-title">URL Shortener</h3>
-                    <p class="projects__item-content-description">Simple pero útil. Un acortador de enlaces desarrollado
-                        con <b>React + Vite</b>.
-                    </p>
-                    <div class="projects__item-tools">
-                        <ul>
-                            <li><img src="img/react.svg" alt="logo react.js"> </li>
-                            <li><img src="img/vite.svg" alt="logo vite"> </li>
-                            <li><img src="img/npm.svg" alt="node package manager logo"></li>
-                        </ul>
+                    <div class="experience-column">
+                        <h3>Formación</h3>
+                        <div id="education-list"></div>
                     </div>
-                    <a class="project__btn" href="https://url-shortener-woad.vercel.app/" target="_blank">🌐 Ver
-                        proyecto</a>
                 </div>
-            </div>
+            </section>
 
-            <div class="projects__item">
-                <img class="projects__item-img" src="./img/contact-list.jpg">
-                <div class="projects__item-content">
-                    <h3 class="projects__item-content-title">Contact List</h3>
-                    <p class="projects__item-content-description">Lista de contacto desarrollada con <b>React.js</b> y
-                        <b>Bootstrap 5</b>. El usuario podrá añadir y quitar contactos de la lista rellenando una seria
-                        de datos.
-                    </p>
-                    <div class="projects__item-tools">
-                        <ul>
-                            <li><img src="img/react.svg" alt="logo react.js"> </li>
-                            <li><img src="img/bootstrap.svg" alt="logo bootstrap 5"> </li>
-                            <li><img src="img/npm.svg" alt="node package manager logo"></li>
-                        </ul>
-                    </div>
-                    <a class="project__btn" href="https://contact-list-eta.vercel.app/" target="_blank">🌐 Ver
-                        proyecto</a>
-                </div>
-            </div>
+            <section class="projects section" id="featured" data-reveal>
+                <span class="section-rotator">Proyectos</span>
+                <header class="section-heading">
+                    <p class="section-heading__kicker">Proyectos destacados</p>
+                    <h2>Cuatro proyectos que representan bien mi trabajo</h2>
+                </header>
 
-        </section>
+                <p class="projects__intro">Estos bloques se generan desde datos en JavaScript. Para añadir un proyecto
+                    nuevo, solo tienes que sumar un objeto al array.</p>
 
-        <section class="contact" id="contact">
-            <!--<h2 class="contact__title">👋🏼 Contacta conmigo!</h2>
+                <div class="featured-grid" id="featured-projects"></div>
 
-            <div class="contact__form">
-                <form action="https://formspree.io/f/myyodewp" method="POST">
-                    <input required id="input-form" class="form__nombre" type="text" name="nombre"
-                        placeholder="¿Cómo te llamas?">
-                    <input required id="input-form" class="form__email" type="email" name="email"
-                        placeholder="Tu email">
-                    <textarea required id="input-form" class="form__mensaje" name="mensaje"
-                        placeholder="Mensaje"></textarea>
-                    <input class="form__accept" required type="checkbox" id="terms-checkbox">
-                    <label for="terms-checkbox">Acepto los términos y condiciones</label>
-                    <input value="Enviar" class="form__btn" type="submit">
-                </form>
-            </div>-->
+                <template id="featured-card-template">
+                    <article class="featured-card" data-reveal>
+                        <div class="featured-card__media">
+                            <img class="featured-card__image" src="" alt="">
+                            <span class="featured-card__year"></span>
+                        </div>
 
-            <div class="contact__icons">
-                <div class="contact__icons-email">
-                    <img src="./img/mensaje.svg">
-                    <a href="mailto:i.benimorales@gmail.com">i.benimorales@gmail.com</a>
-                </div>
-                <div class="contact__icons-location">
-                    <img src="./img/location.svg">
-                    <p>Sevilla</p>
-                </div>
-            </div>
-        </section>
+                        <div class="featured-card__body">
+                            <p class="featured-card__role"></p>
+                            <h3 class="featured-card__title"></h3>
+                            <p class="lang-pair featured-card__summary"></p>
+                            <p class="featured-card__note"></p>
+                            <ul class="tech-pills featured-card__tech"></ul>
 
-    </main>
-    <button class="g-recaptcha" data-sitekey="6LeVmLUfAAAAAP5wG3H4rFpUTYHMd2NKW3M748YG" data-callback='onSubmit'
-        data-action='submit'>
-    </button>
-    <footer>
-        <p>Portfolio realizado con 💙 por <b>Beni Morales.</b></p>
-    </footer>
+                            <a class="featured-card__link" target="_blank" rel="noopener noreferrer">Ver proyecto</a>
+                        </div>
+                    </article>
+                </template>
+            </section>
 
-    <script src="https://www.google.com/recaptcha/api.js"></script>
+            <section class="archive section" id="archive" data-reveal>
+                <span class="section-rotator">Más proyectos</span>
+                <header class="section-heading">
+                    <p class="section-heading__kicker">Otros proyectos</p>
+                    <h2>Más cosas que he construido</h2>
+                </header>
+
+                <div class="archive-grid" id="archive-projects"></div>
+
+                <template id="archive-card-template">
+                    <article class="archive-card" data-reveal>
+                        <img class="archive-card__image" src="" alt="">
+                        <div class="archive-card__body">
+                            <p class="archive-card__meta"></p>
+                            <h3 class="archive-card__title"></h3>
+                            <p class="lang-pair archive-card__summary"></p>
+                            <ul class="tech-pills archive-card__tech"></ul>
+                            <a class="archive-card__link" target="_blank" rel="noopener noreferrer">Ver</a>
+                        </div>
+                    </article>
+                </template>
+            </section>
+
+            <section class="contact section" id="contact" data-reveal>
+                <span class="section-rotator">Contacto</span>
+                <header class="section-heading">
+                    <p class="section-heading__kicker">Contacto</p>
+                    <h2>Si te interesa mi perfil, hablamos</h2>
+                </header>
+
+                <div class="contact-grid" id="contact-grid"></div>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <p class="lang-pair" id="footer-line"></p>
+        </footer>
+    </div>
+
+    <script src="./js/data.js"></script>
     <script src="./js/main.js"></script>
 </body>
 
