@@ -1,0 +1,7 @@
+Options -Indexes
+DirectoryIndex index.html
+ErrorDocument 404 /app-cc3b4abc35ed/404.html
+<IfModule mod_headers.c>
+  Header set X-Robots-Tag "noindex, nofollow, noarchive, nosnippet, noimageindex"
+  Header set Referrer-Policy "no-referrer"
+</IfModule>
