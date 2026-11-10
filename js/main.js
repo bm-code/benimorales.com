@@ -287,11 +287,194 @@ function loadAnalytics() {
     window.addEventListener('load', () => setTimeout(load, 4000), { once: true });
 }
 
+function initCursorTrail() {
+    const canvas = document.getElementById('cursor-trail');
+
+    if (!canvas) {
+        return;
+    }
+
+    const disableTrail =
+        window.matchMedia('(pointer: coarse)').matches ||
+        window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    if (disableTrail) {
+        canvas.remove();
+        return;
+    }
+
+    const context = canvas.getContext('2d');
+
+    if (!context) {
+        canvas.remove();
+        return;
+    }
+
+    let dpr = 1;
+    let width = 0;
+    let height = 0;
+
+    const pointer = {
+        x: window.innerWidth * 0.5,
+        y: window.innerHeight * 0.24,
+        targetX: window.innerWidth * 0.5,
+        targetY: window.innerHeight * 0.24
+    };
+
+    const trail = Array.from({ length: 14 }, () => ({ x: pointer.x, y: pointer.y }));
+    const particles = [];
+    const maxParticles = 260;
+
+    const resize = () => {
+        dpr = Math.min(window.devicePixelRatio || 1, 2);
+        width = window.innerWidth;
+        height = window.innerHeight;
+
+        canvas.width = Math.floor(width * dpr);
+        canvas.height = Math.floor(height * dpr);
+        canvas.style.width = `${width}px`;
+        canvas.style.height = `${height}px`;
+
+        context.setTransform(dpr, 0, 0, dpr, 0, 0);
+    };
+
+    const setSpotlight = (x, y) => {
+        document.documentElement.style.setProperty('--cursor-x', `${x}px`);
+        document.documentElement.style.setProperty('--cursor-y', `${y}px`);
+    };
+
+    const spawnParticles = (x, y, velocity) => {
+        const amount = Math.max(2, Math.min(12, Math.round(velocity / 4) + 2));
+
+        for (let i = 0; i < amount; i += 1) {
+            const angle = Math.random() * Math.PI * 2;
+            const force = 0.28 + Math.random() * 1.1 + velocity * 0.008;
+
+            particles.push({
+                x,
+                y,
+                vx: Math.cos(angle) * force,
+                vy: Math.sin(angle) * force,
+                radius: 2 + Math.random() * 7,
+                alpha: 0.4 + Math.random() * 0.45,
+                decay: 0.012 + Math.random() * 0.02
+            });
+        }
+
+        if (particles.length > maxParticles) {
+            particles.splice(0, particles.length - maxParticles);
+        }
+    };
+
+    const updateTrail = () => {
+        pointer.x += (pointer.targetX - pointer.x) * 0.3;
+        pointer.y += (pointer.targetY - pointer.y) * 0.3;
+
+        trail[0].x = pointer.x;
+        trail[0].y = pointer.y;
+
+        for (let i = 1; i < trail.length; i += 1) {
+            const previous = trail[i - 1];
+            trail[i].x += (previous.x - trail[i].x) * 0.45;
+            trail[i].y += (previous.y - trail[i].y) * 0.45;
+        }
+    };
+
+    const drawTrailLine = () => {
+        for (let i = 0; i < trail.length - 1; i += 1) {
+            const current = trail[i];
+            const next = trail[i + 1];
+            const alpha = 0.28 - i * 0.015;
+
+            if (alpha <= 0) {
+                continue;
+            }
+
+            context.strokeStyle = `rgba(67, 247, 212, ${alpha})`;
+            context.lineWidth = Math.max(1.2, 10 - i * 0.62);
+            context.lineCap = 'round';
+
+            context.beginPath();
+            context.moveTo(current.x, current.y);
+            context.lineTo(next.x, next.y);
+            context.stroke();
+        }
+    };
+
+    const drawParticles = () => {
+        for (let i = particles.length - 1; i >= 0; i -= 1) {
+            const particle = particles[i];
+
+            particle.x += particle.vx;
+            particle.y += particle.vy;
+            particle.vx *= 0.94;
+            particle.vy *= 0.94;
+            particle.alpha -= particle.decay;
+            particle.radius *= 0.986;
+
+            if (particle.alpha <= 0.02 || particle.radius <= 0.35) {
+                particles.splice(i, 1);
+                continue;
+            }
+
+            const glow = context.createRadialGradient(
+                particle.x,
+                particle.y,
+                0,
+                particle.x,
+                particle.y,
+                particle.radius * 2.6
+            );
+
+            glow.addColorStop(0, `rgba(67, 247, 212, ${particle.alpha})`);
+            glow.addColorStop(0.5, `rgba(67, 247, 212, ${particle.alpha * 0.36})`);
+            glow.addColorStop(1, 'rgba(67, 247, 212, 0)');
+
+            context.fillStyle = glow;
+            context.beginPath();
+            context.arc(particle.x, particle.y, particle.radius * 2.6, 0, Math.PI * 2);
+            context.fill();
+        }
+    };
+
+    const render = () => {
+        context.clearRect(0, 0, width, height);
+        updateTrail();
+        drawTrailLine();
+        drawParticles();
+        requestAnimationFrame(render);
+    };
+
+    resize();
+    setSpotlight(pointer.x, pointer.y);
+
+    window.addEventListener('resize', resize);
+
+    window.addEventListener('pointermove', (event) => {
+        const deltaX = event.clientX - pointer.targetX;
+        const deltaY = event.clientY - pointer.targetY;
+        const velocity = Math.hypot(deltaX, deltaY);
+
+        pointer.targetX = event.clientX;
+        pointer.targetY = event.clientY;
+
+        setSpotlight(event.clientX, event.clientY);
+        spawnParticles(event.clientX, event.clientY, velocity);
+    });
+
+    window.addEventListener('pointerdown', () => {
+        spawnParticles(pointer.targetX, pointer.targetY, 18);
+    });
+
+    render();
+}
+
 function init() {
     lang = detectLang();
     renderAll();
     initMenu();
     $('#lang-toggle').addEventListener('click', () => setLang(lang === 'es' ? 'en' : 'es'));
+    initCursorTrail();
     loadAnalytics();
 }
 
