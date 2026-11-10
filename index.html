@@ -3,226 +3,200 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="color-scheme" content="dark">
+    <meta name="theme-color" content="#070b16">
 
-    <title>Beni Morales | Angular Specialist · Frontend & Mobile Developer</title>
+    <title>Beni Morales | Desarrollador frontend y mobile (Angular)</title>
     <meta name="description"
-        content="Portfolio de Beni Morales. Desarrollo Frontend y Mobile con foco en Angular, calidad de código y producto.">
-    <meta name="keywords"
-        content="Beni Morales, Angular Specialist, Frontend Developer, Mobile Developer, Flutter, Microfrontends, TypeScript, CI/CD, GitLab">
+        content="Portfolio de Beni Morales, desarrollador frontend y mobile con más de 4 años de experiencia. Trabajo con Angular, TypeScript y Flutter.">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <link rel="canonical" href="https://benimorales.com/">
 
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Beni Morales | Angular Specialist · Frontend & Mobile">
+    <meta property="og:site_name" content="Beni Morales">
+    <meta property="og:url" content="https://benimorales.com/">
+    <meta property="og:title" content="Beni Morales | Desarrollador frontend y mobile (Angular)">
     <meta property="og:description"
-        content="Desarrollador Frontend y Mobile con experiencia en Angular, migraciones de versión y arquitectura modular.">
-    <meta property="og:image" content="./img/memoji.jpg">
+        content="Desarrollador frontend y mobile con más de 4 años de experiencia. Angular, TypeScript y Flutter.">
+    <meta property="og:image" content="https://benimorales.com/img/memoji.jpg">
+    <meta property="og:image:alt" content="Memoji de Beni Morales">
     <meta property="og:locale" content="es_ES">
+    <meta property="og:locale:alternate" content="en_US">
 
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Beni Morales | Angular Specialist · Frontend & Mobile">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Beni Morales | Desarrollador frontend y mobile (Angular)">
     <meta name="twitter:description"
-        content="Portfolio personal de desarrollo Frontend y Mobile.">
-    <meta name="twitter:image" content="./img/memoji.jpg">
+        content="Desarrollador frontend y mobile con más de 4 años de experiencia. Angular, TypeScript y Flutter.">
+    <meta name="twitter:image" content="https://benimorales.com/img/memoji.jpg">
 
-    <script>(function (w, d, s, l, i) {
-            w[l] = w[l] || []; w[l].push({
-                'gtm.start':
-                    new Date().getTime(), event: 'gtm.js'
-            }); var f = d.getElementsByTagName(s)[0],
-                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-NKQC82H');</script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Beni Morales",
+        "url": "https://benimorales.com/",
+        "image": "https://benimorales.com/img/memoji.jpg",
+        "jobTitle": "Frontend and mobile developer",
+        "worksFor": { "@type": "Organization", "name": "A3 SATEL" },
+        "knowsAbout": ["Angular", "TypeScript", "Flutter", "Vue", "React", "Astro"],
+        "sameAs": [
+            "https://www.linkedin.com/in/benimoralessilva/",
+            "https://github.com/bm-code"
+        ]
+    }
+    </script>
 
     <link rel="icon" type="image/x-icon" href="./img/favicon.ico">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Syne:wght@500;700;800&display=swap"
-        rel="stylesheet">
+    <link rel="preload" href="./fonts/bricolage-latin.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NKQC82H" height="0" width="0"
-            style="display:none;visibility:hidden"></iframe></noscript>
+            style="display:none;visibility:hidden" title="Analytics"></iframe></noscript>
 
-    <canvas class="cursor-trail" id="cursor-trail" aria-hidden="true"></canvas>
-    <a class="floating-cta" href="#contact">Contacto</a>
+    <a class="skip-link" href="#main" data-i18n="skip">Saltar al contenido</a>
+    <div class="progress" aria-hidden="true"></div>
 
-    <div class="site-shell" id="top">
-        <header class="site-header">
-            <div class="site-header__inner">
-                <a class="brand" href="#top" aria-label="Volver arriba">
-                    <img src="./img/logo.svg" alt="Beni Morales logo">
-                </a>
+    <header class="site-header">
+        <div class="wrap site-header__inner">
+            <a class="brand" href="#top" data-i18n-attr="aria-label:logoAlt" aria-label="Beni Morales, ir al inicio">
+                <img src="./img/logo.svg" alt="" width="147" height="30">
+            </a>
 
+            <nav class="site-nav" id="site-nav" data-i18n-attr="aria-label:navLabel" aria-label="Navegación principal">
+                <a class="site-nav__link" href="#about" data-i18n="navAbout">Perfil</a>
+                <a class="site-nav__link" href="#experience" data-i18n="navExperience">Experiencia</a>
+                <a class="site-nav__link" href="#projects" data-i18n="navProjects">Proyectos</a>
+                <a class="site-nav__link site-nav__link--cta" href="#contact" data-i18n="navContact">Contacto</a>
+            </nav>
+
+            <div class="site-header__tools">
+                <button class="lang-toggle" type="button" id="lang-toggle" lang="en" aria-label="Switch to English">
+                    <span aria-hidden="true">EN</span>
+                </button>
                 <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav"
                     aria-label="Abrir menú">
-                    <span></span>
-                    <span></span>
+                    <span class="menu-toggle__bar"></span>
+                    <span class="menu-toggle__bar"></span>
                 </button>
-
-                <nav class="site-nav" id="site-nav" aria-label="Navegación principal">
-                    <a class="site-nav__link" href="#about">Perfil</a>
-                    <a class="site-nav__link" href="#experience">Experiencia</a>
-                    <a class="site-nav__link" href="#featured">Proyectos</a>
-                    <a class="site-nav__link" href="#archive">Más proyectos</a>
-                    <a class="site-nav__cta" href="#contact">Contactar</a>
-                </nav>
             </div>
-        </header>
+        </div>
+    </header>
 
-        <main>
-            <section class="hero section" data-reveal>
-                <span class="hero__rotator">Frontend + Mobile</span>
+    <main id="main">
+        <section class="hero" id="top" aria-labelledby="hero-title">
+            <div class="hero__bg" aria-hidden="true">
+                <div class="hero__tiles"></div>
+                <div class="hero__glow hero__glow--a"></div>
+                <div class="hero__glow hero__glow--b"></div>
+            </div>
+
+            <div class="wrap hero__layout">
+                <div class="hero__tile">
+                    <img src="./img/memoji.jpg" alt="Memoji de Beni Morales" width="512" height="512"
+                        data-i18n-attr="alt:memojiAlt" fetchpriority="high">
+                </div>
 
                 <div class="hero__copy">
-                    <p class="hero__kicker" id="hero-kicker"></p>
-                    <h1 class="hero__title" id="hero-title"></h1>
-                    <p class="hero__role" id="hero-role"></p>
-                    <p class="hero__intro" id="hero-intro"></p>
-
-                    <p class="lang-pair" id="hero-line"></p>
+                    <h1 class="hero__title" id="hero-title" aria-label="Beni Morales">
+                        <span class="hero__line" aria-hidden="true"><span>Beni</span></span>
+                        <span class="hero__line" aria-hidden="true"><span>Morales</span></span>
+                    </h1>
+                    <p class="hero__role" id="hero-role">Desarrollador frontend y mobile</p>
+                    <p class="hero__intro" id="hero-intro">Llevo más de cuatro años desarrollando aplicaciones web y
+                        mobile. Mi herramienta principal es Angular. También trabajo con Vue, React y Flutter.</p>
+                    <p class="hero__line-text" id="hero-line">Ahora estoy en A3 SATEL, donde he migrado proyectos de
+                        Angular 15 a 20.</p>
 
                     <div class="hero__actions">
                         <a class="btn btn--primary" href="./docs/CV_Beni_Morales_2026.pdf" target="_blank"
-                            rel="noopener" download="CV_Beni_Morales_2026">CV 2026</a>
-                        <a class="btn btn--secondary" href="#featured">Ver proyectos</a>
+                            rel="noopener" download="CV_Beni_Morales_2026" data-i18n="cv">Descargar CV</a>
+                        <a class="btn btn--ghost" href="#projects" data-i18n="seeProjects">Ver proyectos</a>
                     </div>
-
-                    <div class="hero__contact">
-                        <a id="hero-email" href="mailto:i.benimorales@gmail.com">i.benimorales@gmail.com</a>
-                        <a id="hero-linkedin" href="https://www.linkedin.com/in/benimoralessilva/" target="_blank"
-                            rel="nofollow noopener">LinkedIn</a>
-                    </div>
-
-                    <ul class="hero__badges" id="hero-badges"></ul>
                 </div>
+            </div>
+        </section>
 
-                <aside class="hero__visual">
-                    <div class="hero__memoji-wrap">
-                        <img src="./img/memoji.jpg" alt="Beni Morales memoji">
+        <div class="marquee" aria-hidden="true">
+            <div class="marquee__track" id="marquee-track"></div>
+        </div>
+
+        <section class="section wrap" id="about" aria-labelledby="about-title">
+            <h2 class="section__title" id="about-title" data-i18n="aboutTitle">Perfil</h2>
+            <p class="lead" id="profile-summary"></p>
+
+            <h3 class="subtitle" data-i18n="stackTitle">Tecnologías</h3>
+            <div class="stack-layout" id="stack-groups"></div>
+
+            <h3 class="subtitle" data-i18n="workTitle">Cómo trabajo</h3>
+            <ul class="work-list" id="why-list"></ul>
+        </section>
+
+        <section class="section wrap" id="experience" aria-labelledby="experience-title">
+            <h2 class="section__title" id="experience-title" data-i18n="experienceTitle">Experiencia</h2>
+            <div class="experience-layout">
+                <div>
+                    <ol class="timeline" id="experience-list"></ol>
+                </div>
+                <div>
+                    <h3 class="subtitle subtitle--first" data-i18n="educationTitle">Formación</h3>
+                    <ul class="education" id="education-list"></ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="section wrap" id="projects" aria-labelledby="projects-title">
+            <h2 class="section__title" id="projects-title" data-i18n="projectsTitle">Proyectos</h2>
+            <div class="featured-grid" id="featured-projects"></div>
+
+            <h3 class="subtitle" data-i18n="archiveTitle">Proyectos más pequeños</h3>
+            <div class="archive-grid" id="archive-projects"></div>
+
+            <template id="featured-card-template">
+                <article class="card featured-card">
+                    <div class="card__media">
+                        <img class="card__image" src="" alt="" loading="lazy" decoding="async">
+                        <span class="card__year"></span>
                     </div>
-
-                    <div class="hero__marquee">
-                        <div class="hero__marquee-track" id="hero-marquee-track"></div>
+                    <div class="card__body">
+                        <h3 class="card__title"></h3>
+                        <p class="card__summary"></p>
+                        <ul class="tech-pills"></ul>
+                        <a class="card__link" target="_blank" rel="noopener noreferrer"><span
+                                data-i18n="viewProject">Ver proyecto</span></a>
                     </div>
-                </aside>
-            </section>
-
-            <section class="statement section" data-reveal>
-                <span class="section-rotator">Manifiesto</span>
-                <div class="statement__grid" id="statement-grid"></div>
-            </section>
-
-            <section class="about section" id="about" data-reveal>
-                <span class="section-rotator">Perfil</span>
-                <header class="section-heading">
-                    <p class="section-heading__kicker">Sobre mí</p>
-                    <h2>Qué puedes esperar de mí en un equipo</h2>
-                </header>
-
-                <p class="lang-pair about__lead" id="profile-summary"></p>
-
-                <div class="stack-layout" id="stack-groups"></div>
-
-                <article class="why-card">
-                    <h3>Por qué podría encajar en tu equipo</h3>
-                    <ul class="why-card__list" id="why-list"></ul>
                 </article>
-            </section>
+            </template>
 
-            <section class="experience section" id="experience" data-reveal>
-                <span class="section-rotator">Experiencia</span>
-                <header class="section-heading">
-                    <p class="section-heading__kicker">Recorrido profesional</p>
-                    <h2>Experiencia y formación</h2>
-                </header>
-
-                <div class="experience-layout">
-                    <div class="experience-column">
-                        <h3>Experiencia</h3>
-                        <div id="experience-list"></div>
+            <template id="archive-card-template">
+                <article class="card archive-card">
+                    <div class="card__media">
+                        <img class="card__image" src="" alt="" loading="lazy" decoding="async">
+                        <span class="card__year"></span>
                     </div>
-
-                    <div class="experience-column">
-                        <h3>Formación</h3>
-                        <div id="education-list"></div>
+                    <div class="card__body">
+                        <h4 class="card__title"></h4>
+                        <p class="card__summary"></p>
+                        <ul class="tech-pills"></ul>
+                        <a class="card__link" target="_blank" rel="noopener noreferrer"><span
+                                data-i18n="viewProject">Ver proyecto</span></a>
                     </div>
-                </div>
-            </section>
+                </article>
+            </template>
+        </section>
 
-            <section class="projects section" id="featured" data-reveal>
-                <span class="section-rotator">Proyectos</span>
-                <header class="section-heading">
-                    <p class="section-heading__kicker">Proyectos destacados</p>
-                    <h2>Cuatro proyectos que representan bien mi trabajo</h2>
-                </header>
+        <section class="section section--contact wrap" id="contact" aria-labelledby="contact-title">
+            <h2 class="section__title" id="contact-title" data-i18n="contactTitle">Contacto</h2>
+            <p class="lead" data-i18n="contactLead">Puedes escribirme por email o por LinkedIn.</p>
+            <div class="contact-grid" id="contact-grid"></div>
+        </section>
+    </main>
 
-                <p class="projects__intro">Estos bloques se generan desde datos en JavaScript. Para añadir un proyecto
-                    nuevo, solo tienes que sumar un objeto al array.</p>
-
-                <div class="featured-grid" id="featured-projects"></div>
-
-                <template id="featured-card-template">
-                    <article class="featured-card" data-reveal>
-                        <div class="featured-card__media">
-                            <img class="featured-card__image" src="" alt="">
-                            <span class="featured-card__year"></span>
-                        </div>
-
-                        <div class="featured-card__body">
-                            <p class="featured-card__role"></p>
-                            <h3 class="featured-card__title"></h3>
-                            <p class="lang-pair featured-card__summary"></p>
-                            <p class="featured-card__note"></p>
-                            <ul class="tech-pills featured-card__tech"></ul>
-
-                            <a class="featured-card__link" target="_blank" rel="noopener noreferrer">Ver proyecto</a>
-                        </div>
-                    </article>
-                </template>
-            </section>
-
-            <section class="archive section" id="archive" data-reveal>
-                <span class="section-rotator">Más proyectos</span>
-                <header class="section-heading">
-                    <p class="section-heading__kicker">Otros proyectos</p>
-                    <h2>Más cosas que he construido</h2>
-                </header>
-
-                <div class="archive-grid" id="archive-projects"></div>
-
-                <template id="archive-card-template">
-                    <article class="archive-card" data-reveal>
-                        <img class="archive-card__image" src="" alt="">
-                        <div class="archive-card__body">
-                            <p class="archive-card__meta"></p>
-                            <h3 class="archive-card__title"></h3>
-                            <p class="lang-pair archive-card__summary"></p>
-                            <ul class="tech-pills archive-card__tech"></ul>
-                            <a class="archive-card__link" target="_blank" rel="noopener noreferrer">Ver</a>
-                        </div>
-                    </article>
-                </template>
-            </section>
-
-            <section class="contact section" id="contact" data-reveal>
-                <span class="section-rotator">Contacto</span>
-                <header class="section-heading">
-                    <p class="section-heading__kicker">Contacto</p>
-                    <h2>Si te interesa mi perfil, hablamos</h2>
-                </header>
-
-                <div class="contact-grid" id="contact-grid"></div>
-            </section>
-        </main>
-
-        <footer class="site-footer">
-            <p class="lang-pair" id="footer-line"></p>
-        </footer>
-    </div>
+    <footer class="site-footer">
+        <p class="wrap" data-i18n="footer">© 2026 Beni Morales</p>
+    </footer>
 
     <script src="./js/data.js"></script>
     <script src="./js/main.js"></script>
