@@ -157,23 +157,15 @@ img {
 
 .brand {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    align-items: center;
     min-height: 44px;
     min-width: 0;
     flex: 0 1 auto;
-    line-height: 1.15;
 }
 
-.brand__name {
-    font-size: 1.05rem;
-    font-weight: 800;
-    letter-spacing: -0.02em;
-}
-
-.brand__role {
-    font-size: 0.75rem;
-    color: var(--muted);
+.brand img {
+    width: clamp(150px, 48vw, 250px);
+    height: auto;
 }
 
 .site-header__tools {
