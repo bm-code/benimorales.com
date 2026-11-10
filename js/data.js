@@ -5,7 +5,7 @@ window.PORTFOLIO_CONTENT = {
             navLabel: 'Navegación principal',
             menuOpen: 'Abrir menú',
             menuClose: 'Cerrar menú',
-            langSwitchLabel: 'Switch to English',
+            langSwitchLabel: 'EN, switch to English',
             langSwitchText: 'EN',
             navExperience: 'Experiencia',
             navProjects: 'Proyectos',
@@ -26,7 +26,6 @@ window.PORTFOLIO_CONTENT = {
             previewAlt: 'Captura de {title}',
             pageTitle: 'Beni Morales | Frontend & Mobile Developer (Angular)',
             pageDescription: 'Beni Morales, Frontend & Mobile Developer en Sevilla. Más de 5 años con Angular y TypeScript; también Flutter, Vue y Astro.',
-            logoAlt: 'Beni Morales, ir al inicio',
             memojiAlt: 'Memoji de Beni Morales',
             footer: '© 2026 Beni Morales'
         },
@@ -35,7 +34,7 @@ window.PORTFOLIO_CONTENT = {
             navLabel: 'Main navigation',
             menuOpen: 'Open menu',
             menuClose: 'Close menu',
-            langSwitchLabel: 'Cambiar a español',
+            langSwitchLabel: 'ES, cambiar a español',
             langSwitchText: 'ES',
             navExperience: 'Experience',
             navProjects: 'Projects',
@@ -56,7 +55,6 @@ window.PORTFOLIO_CONTENT = {
             previewAlt: 'Screenshot of {title}',
             pageTitle: 'Beni Morales | Frontend & Mobile Developer (Angular)',
             pageDescription: 'Beni Morales, Frontend & Mobile Developer based in Seville. 5+ years with Angular and TypeScript; also Flutter, Vue and Astro.',
-            logoAlt: 'Beni Morales, back to top',
             memojiAlt: 'Memoji of Beni Morales',
             footer: '© 2026 Beni Morales'
         }
