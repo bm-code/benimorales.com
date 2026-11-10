@@ -360,7 +360,8 @@ img {
 /* Memoji dentro de una baldosa con esquinas concavas */
 .hero__tile {
     --r: 16%;
-    width: clamp(104px, 30vw, 300px);
+    --tile-w: clamp(104px, 30vw, 200px);
+    width: var(--tile-w);
     aspect-ratio: 1;
     background: linear-gradient(150deg, #123a47, #1a2750);
     -webkit-mask:
@@ -377,12 +378,16 @@ img {
 }
 
 .hero__tile {
-    padding: 7%;
+    padding: calc(var(--tile-w) * 0.07);
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    align-content: center;
 }
 
 .hero__tile img {
     width: 100%;
-    height: 100%;
+    height: auto;
+    aspect-ratio: 1;
     object-fit: cover;
     border-radius: 12%;
 }
@@ -1045,6 +1050,7 @@ a.contact-card:active {
         grid-row: 1;
         width: 100%;
         max-width: 320px;
+        --tile-w: 320px;
         justify-self: center;
     }
 
